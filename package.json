@@ -1,5 +1,5 @@
 {
-  "name": "koa-load-route-files",
+  "name": "load-route-files",
   "version": "0.0.0",
   "description": "A koa middleware responsable for loading rotes inside specific folder.",
   "main": "src/index.js",
