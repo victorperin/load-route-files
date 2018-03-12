@@ -29,7 +29,7 @@ describe('List route files', () => {
 
   });
 
-  it('should not list unexisting route files', async () => {
+  it('should not list nonexistent route files', async () => {
     mockFs({
       home: {'routes.js': ''},
       someotherThing: {'routes.js': ''},
