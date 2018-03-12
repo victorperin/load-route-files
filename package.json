@@ -20,6 +20,7 @@
     "jest": "^22.4.2"
   },
   "dependencies": {
+    "koa-compose": "^4.0.0",
     "list-directories": "^1.1.0"
   }
 }
