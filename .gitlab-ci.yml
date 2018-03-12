@@ -1,0 +1,22 @@
+image: node:9
+
+before_script:
+  - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+  - npm install
+
+cache:
+  paths:
+    - node_modules/
+
+test:node:9:
+  script:
+    - npm test
+
+
+publish:
+  stage: deploy
+  only:
+    - tags
+    - triggers
+  script:
+    - npm publish
