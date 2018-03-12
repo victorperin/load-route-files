@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "bluebird": "^3.5.1",
-    "koa-compose": "^4.0.0",
     "list-directories": "^1.1.0"
   }
 }
