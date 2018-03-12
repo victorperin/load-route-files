@@ -1,0 +1,19 @@
+{
+  "name": "koa-load-route-files",
+  "version": "0.0.0",
+  "description": "A koa middleware responsable for loading rotes inside specific folder.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitctorperin/koa-load-route-files"
+  },
+  "keywords": [
+    "koa",
+    "routes"
+  ],
+  "author": "Victor Perin",
+  "license": "MIT"
+}
