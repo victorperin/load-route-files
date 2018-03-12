@@ -17,6 +17,7 @@
   "author": "Victor Perin",
   "license": "MIT",
   "devDependencies": {
+    "chai": "^4.1.2",
     "jest": "^22.4.2"
   },
   "dependencies": {
