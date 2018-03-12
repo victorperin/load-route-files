@@ -67,4 +67,24 @@ describe('List route files', () => {
     result.should.not.contain(wrongFile);
   });
 
+  it('should not list nonexistent route files with custom route filename', async () => {
+    mockFs({
+      home: {'anotherCustomName.js': ''},
+      someotherThing: {'anotherCustomName.js': ''},
+      'file.js': '',
+      teste: {'model.js': '', 'tests.js':''},
+    });
+
+    const listOfFakeFiles = [
+      pathResolver('./home/anotherCustomName.js'),
+      pathResolver('./someotherThing/anotherCustomName.js'),
+    ];
+    const wrongFile = pathResolver('./teste/anotherCustomName.js');
+
+    const result = await listRouteFiles({directory: '.', routeFilename: 'anotherCustomName'});
+
+    result.should.have.same.members(listOfFakeFiles);
+    result.should.not.contain(wrongFile);
+  });
+
 });
