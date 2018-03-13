@@ -34,3 +34,5 @@ In this example I use a folder called `domains`. So the structure should be at l
 
   routeFiles.forEach(api.use(route));
 ```
+
+You can also specify a `routeFilename` in config, with is a custom name for the route file, if you wish.
