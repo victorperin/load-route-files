@@ -29,10 +29,12 @@ In this example I use a folder called `domains`. So the structure should be at l
   const Koa = require('koa');
   const api = new Koa();
 
-  const loadRouteFiles = require('load-route-files');
-  const routeFiles = await loadRouteFiles({ directory: 'domains' });
+  const loadRoutes = require('load-route-files');
+  const routes = await loadRoutes({ directory: 'domains' });
 
-  routeFiles.forEach(api.use(route));
+  const koaCompose = require('koa-compose');
+
+  api.use( koaCompose(routes) );
 ```
 
 You can also specify a `routeFilename` in config, with is a custom name for the route file, if you wish.
