@@ -1,0 +1,50 @@
+version: 2
+
+jobs:
+
+  tests:
+    working_directory: ~/teste
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+
+      - run:
+          name: install dependencies
+          command: npm install
+
+      - run:
+          name: Run tests
+          command: npm test
+
+  deploy:
+    working_directory: ~/deploy
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+
+      - run:
+          name: install dependencies
+          command: npm install
+
+      - run:
+          name: login to npm
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+
+      - run:
+          name: Publish in npm
+          command: npm publish
+
+workflows:
+  version: 2
+  test_and_deploy:
+    jobs:
+      - tests
+      - deploy:
+          requires:
+            - tests
+          filters:
+            branches:
+              only:
+                - master
