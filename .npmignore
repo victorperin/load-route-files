@@ -1,0 +1,4 @@
+.circleci/
+.gitlab-ci.yml
+*.test.js
+test/
