@@ -30,7 +30,7 @@ In this example I use a folder called `domains`. So the structure should be at l
   const api = new Koa();
 
   const loadRouteFiles = require('load-route-files');
-  const routeFiles = loadRouteFiles({ directory: 'domains' });
+  const routeFiles = await loadRouteFiles({ directory: 'domains' });
 
   routeFiles.forEach(api.use(route));
 ```
