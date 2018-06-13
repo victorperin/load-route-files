@@ -22,6 +22,8 @@ jobs:
     docker:
       - image: circleci/node
     steps:
+      - attach_workspace:
+          at: ~/deploy
       - checkout
 
       - run:
@@ -30,7 +32,7 @@ jobs:
 
       - run:
           name: login to npm
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/deploy/.npmrc
 
       - run:
           name: Publish in npm
