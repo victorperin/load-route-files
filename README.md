@@ -1,5 +1,6 @@
 # Load Route Files
 A package to load all route files to then use them as middlewares.
+I built and tested with Koa, but as agnostic it is, probably can be implemented in any other framework.
 
 # Instalation
 Just run:
