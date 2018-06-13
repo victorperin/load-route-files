@@ -33,7 +33,7 @@ In this example I use a folder called `domains`. So the structure should be at l
   const loadRoutes = require('load-route-files');
   const routes = await loadRoutes({ directory: 'domains' });
 
-  const koaCompose = require('koa-compose');
+  const koaCompose = require('koa-compose'); //takes an array of milewares and compose them as one.
 
   api.use( koaCompose(routes) );
 ```
