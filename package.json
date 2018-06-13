@@ -1,6 +1,6 @@
 {
   "name": "load-route-files",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A lib responsable for loading rotes inside specific folder.",
   "main": "src/index.js",
   "scripts": {
