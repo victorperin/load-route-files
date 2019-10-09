@@ -1,4 +1,7 @@
 # Load Route Files
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/victorperin/load-route-files.svg)](https://greenkeeper.io/)
+
 A package to load all route files to then use them as middlewares.
 I built and tested with Koa, but as agnostic it is, probably can be implemented in any other framework.
 
